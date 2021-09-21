@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Operation"
+                android:id="@+id/edtDialogAppointmentAddOperation"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spnDialogAppointmentAddName"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+
+        <DatePicker
+            android:id="@+id/dpDialogAppointmentAddDate"
+            android:layout_marginBottom="10dp"
+            android:datePickerMode="spinner"
+            android:calendarViewShown="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TimePicker
+            android:id="@+id/dpDialogAppointmentAddTime"
+            android:timePickerMode="spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:text="Save"
+            android:padding="5dp"
+            android:layout_gravity="end"
+            android:id="@+id/btnDialogAppointmentAddSave"
+            android:layout_width="100dp"
+            android:layout_height="50dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+</LinearLayout>

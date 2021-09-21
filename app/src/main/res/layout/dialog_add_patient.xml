@@ -1,0 +1,197 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mbs.view.fragment.DialogAddPatient">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearDialogPatientAdd"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:background="#fff"
+
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgDialogPatientAddImage"
+                android:src="@drawable/ic_patient"
+                android:layout_width="200dp"
+                android:layout_height="200dp">
+            </ImageView>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabDialogPatientAddCam"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_camera"
+                android:layout_gravity="bottom|end"/>
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogPatientAddName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Name"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/spnDialogPatientAddSex">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtDialogPatientAddAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:hint="Age"
+                        >
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txtgender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender :"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/spnDialogPatientAddSex"
+                    app:layout_constraintStart_toStartOf="@id/spnDialogPatientAddSex"/>
+                <Spinner
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtgender"
+                    android:id="@+id/spnDialogPatientAddSex"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"></Spinner>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogPatientAddPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="phone"
+                android:hint="Phone"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogPatientAddAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Address"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogPatientAddPayment"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Remaining Amount (S.P)"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogPatientAddIllnesses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Illnesses"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogPatientAddDrugs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Drugs"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogPatientAddReview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Review"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/btnDialogPatientAddSave"
+            android:text="Save"
+            android:layout_gravity="end"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#fff"/>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+</LinearLayout>
